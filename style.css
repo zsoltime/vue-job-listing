@@ -1,0 +1,257 @@
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f3f3ee;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.75);
+  flex-direction: column;
+  font-family: Lato, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid transparent;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  transition: color .3s ease-in-out, border .3s ease-in-out;
+}
+
+a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+input,
+button,
+select {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a:focus,
+input:focus,
+button:focus,
+select:focus {
+  outline: thin dotted;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.container--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(background.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.page-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2;
+  margin: 0;
+  text-align: center;
+}
+
+.container--hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 4rem);
+}
+
+.hero__title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0 auto 1rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.hero__statistics {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  margin: 0 auto 1rem;
+}
+
+.search-form {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: calc(600px + 2rem);
+  padding: 1rem;
+  width: 100%;
+}
+
+.search-form__row {
+  display: flex;
+  flex: 1 1 20rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+  max-width: 600px;
+}
+
+.search-form__row--margin-bottom {
+  margin-bottom: 1rem;
+}
+
+.search-form__row--full-width {
+  flex-basis: 100%;
+}
+
+.search-form__field {
+  -webkit-appearance: textfield;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  flex: 1 0 100%;
+  padding: 0.5rem;
+}
+
+.search-form__field--short {
+  flex-basis: 70%;
+}
+
+.search-form__field--left {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-form__field--right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search-form__select {
+  flex: 0 1;
+}
+
+.search-form__label {
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  flex-basis: 100%;
+  margin-bottom: 0.5rem;
+  max-width: 600px;
+}
+
+.search-form__btn {
+  background-color: #009688;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  padding: 0.5rem;
+  transition: background .3s ease-in-out;
+  width: 10rem;
+}
+
+.search-form__btn:hover {
+  background-color: #00897b;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 300;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.job {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  flex: 1 1 20rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  transition: .2s transform ease-in-out;
+}
+
+.job:hover {
+  transform: scale(1.01);
+}
+
+.job__details > div {
+  align-items: center;
+  display: flex;
+}
+
+.job svg {
+  margin-right: 0.5rem;
+}
+
+.job__salary {
+  margin-bottom: 1rem;
+}
+
+.job__logo {
+  height: 48px;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  width: auto;
+}
+
+.job__logo img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.job__title {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.job__link {
+  color: #02a8f2;
+  font-weight: 300;
+}
+
+.copyright {
+  font-size: 0.825rem;
+  text-align: center;
+}
+
+.highlighted {
+  background-color: #fff59d;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  padding: 0.2rem;
+}
